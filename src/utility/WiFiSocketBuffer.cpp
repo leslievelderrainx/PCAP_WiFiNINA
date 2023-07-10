@@ -101,4 +101,12 @@ int WiFiSocketBufferClass::read(int socket, uint8_t* data, size_t length)
   return length;
 }
 
+void WiFiSocketBufferClass::printHeader(int socket)
+{
+  if (_buffers[socket].data) {
+    Serial.println("Header Information: ");
+    Serial.println(_buffers[socket].data);
+  }
+}
+
 WiFiSocketBufferClass WiFiSocketBuffer;
