@@ -38,7 +38,6 @@ public:
   int available(int socket);
   int peek(int socket);
   int read(int socket, uint8_t* data, size_t length);
-  void printHeader (int socket);
 
 private:
   struct {
