@@ -321,7 +321,7 @@ bool ServerDrv::getData(uint8_t sock, uint8_t *data, uint8_t peek)
     return false;
 }
 
-bool ServerDrv::getDataBuf(uint8_t sock, uint8_t *_data, uint16_t *_dataLen, uint8_t targetSock)
+bool ServerDrv::getDataBuf(uint8_t sock, uint8_t *_data, uint16_t *_dataLen)
 {
     if (!SpiDrv::available())
     {
@@ -355,12 +355,6 @@ bool ServerDrv::getDataBuf(uint8_t sock, uint8_t *_data, uint16_t *_dataLen, uin
     }
     return false;
 
-    // Locate the packet processing section
-    // Example code assuming TCP packet headers
-    if (targetSock == sock) {
-        uint16_t sourcePort = (_data[0] << 8) | _data[1];
-        uint16_t destinationPort = (_data[2] << 8) | _data[3];
-    }
 }
 
 bool ServerDrv::insertDataBuf(uint8_t sock, const uint8_t *data, uint16_t _len)

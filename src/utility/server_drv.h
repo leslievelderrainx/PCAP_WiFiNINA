@@ -47,7 +47,7 @@ public:
 
     static bool getData(uint8_t sock, uint8_t *data, uint8_t peek = 0);
 
-    static bool getDataBuf(uint8_t sock, uint8_t *data, uint16_t *len, uint8_t targetSock);
+    static bool getDataBuf(uint8_t sock, uint8_t *data, uint16_t *len);
 
     static bool insertDataBuf(uint8_t sock, const uint8_t *_data, uint16_t _dataLen);
 
